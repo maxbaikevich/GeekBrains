@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*1. Почему код дает именно такие результаты?
+
+		var a = 1, b = 1, c, d;
+		c = ++a; alert(c);           // 2
+		d = b++; alert(d);           // 1
+		c = (2+ ++a); alert(c);      // 5
+		d = (2+ b++); alert(d);      // 4
+		alert(a);                    // 3
+		alert(b);                    // 3
+
+		На второй строчке у значения переменной "а" префексная форм унарного оператора, поэтому  инкременирование
+		производится сразу что дает результат 2.
+
+		На третьей строчке у значения переменной "b" постпрефексная форма унарного оператора, поэтому сначала 
+		происходит возвращение значения, а потом выполняется инкременирование, поэтому вернулось заначение 1.
+		
+		На четвертой строчке c = (2+ ++a); //5 так как у "а" вновь префексная форм унарного оператора, 
+		"а" увеличивается снова  на единицу сразу, получилося а = 3; 
+
+		На пятой строчке d = (2+ b++);// 4  так как на третьей строчке у "b" уже была постпрефексная форма унарного оператора
+		то при повторном вызове "b" произошла операция инкременированирования и значение  "b" стало равнятся 2.
+
+		на шестой строчке alert(a); возращает значение 3 так как все опирации инкременирования закончены.
+
+		на седьмой срочке alert(b);  возращает значение 3 так как у "b" в предыдушем вызове опять же была постпрефексная форма унарного оператора, поэтом в этом вызове "b" вернуло число 3.
+
+	*/
+
+	/*2. Чему будет равен x?
+
+		var a = 2;
+		var x = 1 + (a *= 2);
+
+		x будет равен 5, (a *= 2) это сокращеная форма записи, можно записать иначе (a = a * 2) получается что "а" присвоили вырожение "а * 2"
+		
+  */
+
+  /*3. Объявить две целочисленные переменные — a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+
+		a. если a и b положительные, вывести их разность;
+		b. если а и b отрицательные, вывести их произведение;
+		c. если а и b разных знаков, вывести их сумму;
+	*/
+
+  var a = 3;
+  var b = 12;
+  if(a >= 0 && b >= 0) {
+  	console.log(a - b);
+  }
+  else if(a < 0 && b < 0){
+  	console.log(a * b);
+	}
+  else if( a > 0 && b <= 0 || a <=0 && b > 0 ) {
+  	console.log(a + b);
+  }
+
+  // 4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.
+
+	var a = 1;
+	switch (a){
+	  case 0:
+	    console.log(a++);
+	    
+	  case 1:
+	    console.log(a++);
+	    
+	  case 2:
+	    console.log(a++);
+	    
+	  case 3:
+	    console.log(a++);
+	    
+	  case 4:
+	    console.log(a++);
+	    
+	  case 5:
+	    console.log(a++);
+	    
+	  case 6:
+	    console.log(a++);
+	    
+	  case 7:
+	    console.log(a++);
+	    
+	  case 8:
+	    console.log(a++);
+	    
+	  case 9:
+	    console.log(a++);
+	    
+	  case 10:
+	    console.log(a++);
+	    
+	  case 11:
+	    console.log(a++);
+	    
+	  case 12:
+	    console.log(a++);
+	    
+	  case 13:
+	    console.log(a++);
+	    
+	  case 14:
+	    console.log(a++);
+	    
+	  case 15:
+	    console.log(a);
+	    break;
+	}
+
+	//5. Реализовать четыре основные арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+
+	function operationAddition(x, y) {
+		return x + y;
+	}
+
+	function operationSubtraction(x, y) {
+		return x - y;
+	}
+
+	function operationMultiplication(x, y) {
+		return x * y;
+	}
+
+	function operationDivision(x, y) {
+		return x / y;
+	}
+
+	console.log(operationAddition(5, 5));
+	console.log(operationSubtraction(5, 5));
+	console.log(operationMultiplication(5, 5));
+	console.log(operationDivision(5, 5));
+
+	/*6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 — значения аргументов, operation — строка с названием операции. В зависимости от переданного значения выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (применить switch).*/
+
+	function mathOperation(arg1, arg2, operation) {
+		switch(operation){
+    case 'operationAddition':
+      return operationAddition(arg1, arg2);
+    case 'operationSubtraction':
+      return operationSubtraction(arg1, arg2);
+    case 'operationMultiplication':
+      return operationMultiplication(arg1, arg2);
+    case 'operationDivision':
+      return operationDivision(arg1, arg2);
+  	}
+	}
+
+	console.log(mathOperation(2, 2, 'operationAddition'));
+	console.log(mathOperation(1, 2, 'operationSubtraction'));
+	console.log(mathOperation(2, 1, 'operationMultiplication'));
+	console.log(mathOperation(3, 1, 'operationDivision'));
+	</script>
+</body>
+</html>
