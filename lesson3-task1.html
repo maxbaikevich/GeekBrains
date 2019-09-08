@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+//1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+  function num(number){
+    if (number <= 1) {
+      return false;    
+    }
+    var a = 2;
+    while (a < number) {
+      if (number % a == 0){
+        return false;    
+      }
+      a++;    
+    }
+    return true;
+  }
+  var number = 0;
+    while ( number <= 100){
+      if (num(number)) {
+        console.log(number);     
+      }
+    number++;
+  }
+/* 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. 
+Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. 
+3. Товары в корзине хранятся в массиве. Задачи:
+a) Организовать такой массив для хранения товаров в корзине;
+b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.*/
+  var basket = [["Куртка", 1000], ["Штаны", 2000], ["рубашка", 3000]];
+  function countBasketPrice(basket){
+    var check = 0;
+    for(var i = 0; i < basket.length; i++){
+      check+= basket[i][1];
+    }
+    return check;
+  }
+  a = countBasketPrice(basket);
+  console.log("стоимость корзины: " + a);
+      
+//4. * Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла.
+  for(var i = 0; i <= 9; console.log(i++)){
+  }
+//5. * Нарисовать пирамиду с 20 рядами с помощью console.log, как показано на рисунке:   
+  var a = '';
+  for(var i = 0; i <= 20; i++){
+    var a = a + '#';
+    console.log(a);
+  }
+  </script>   
+</body>
+</html>
