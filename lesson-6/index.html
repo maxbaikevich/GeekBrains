@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="nain-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-bascet" href="#">Корзина <span class="span-number">0</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+     </header>
+     <main class="container">
+         <ul class="list-product">
+         </ul>
+     </main>
+     <template id="cards-product">
+         <li class="item-product">
+            <h2 class="product-title"></h2>
+            <img class="product-img">
+            <p class="product-price"></p>
+            <button class="button button--mod"></button> 
+        </li>
+     </template>
+     <section class="modal modal-none">
+        <div class="product-box">
+            <img class="product-img">
+            <p class="product-price"></p>
+            <p class="product-name"></p>
+            <p class="fool-price"></p>
+        </div>
+         <button class="close"></button>
+     </section>
+<script src="js/js.js"></script>
+</body>
+</html>
