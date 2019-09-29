@@ -1,0 +1,68 @@
+body {
+    min-width :1200px;
+    margin: 0;
+}
+.goods-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+header {
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+.cart-button {
+display: inline-block;
+	padding: 12px 20px;
+	font-size: 15px;
+	line-height: 27px;
+	color: #ffffff;
+	background: #f26843;
+	text-align: center;
+	vertical-align: top;
+	text-decoration: none;
+	background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	border-radius: 50px;
+	-webkit-box-shadow:  0 2px 2px rgba(172, 16, 0, 0.64);
+	box-shadow:  0 2px 2px rgba(172, 16, 0, 0.64);
+	border: none;
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+	cursor: pointer;
+}
+
+.cart-button:hover {
+	background: -webkit-linear-gradient(#f58669 0%, #ec6f5e 100%);
+	background: -o-linear-gradient(#f58669 0%, #ec6f5e 100%);
+	background: linear-gradient(#f58669 0%, #ec6f5e 100%);
+	-webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.cart-button:active {
+	background: -webkit-linear-gradient(#d84732 0%, #e1613e 100%);
+	background: -o-linear-gradient(#d84732 0%, #e1613e 100%);
+	background: linear-gradient(#d84732 0%, #e1613e 100%);
+	-webkit-box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+.goods-item {
+    width: 220px;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+}
+.main-nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
